@@ -15,17 +15,21 @@
 # so [1, 2, 2, 3] returns [1, 2, 3]. You may create a new list or
 # modify the passed in list.
 def remove_adjacent(nums):
-    """Your code goes here.  Edit this docstring."""
-    return
+    result = []
+    for num in nums:
+        if len(result) == 0 or num != result[-1]:
+            result.append(num)
+    return result
 
 
 # E. Given two lists sorted in increasing order, create and return a merged
 # list of all the elements in sorted order. You may modify the passed in lists.
 # Ideally, the solution should work in "linear" time, making a single
 # pass of both lists.
-def linear_merge(list1, list2):
-    """Your code goes here.  Edit this docstring."""
-    return
+def linear_merge(list1, list2):    
+    list1.extend(list2)
+    list1.sort()
+    return list1
 
 
 
